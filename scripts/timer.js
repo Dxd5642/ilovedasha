@@ -10,8 +10,7 @@ export function getCorrectForm(number, forms) {
 
 export function updateCountdown() {
     const now = new Date();
-    const currentYear = now.getFullYear();
-    const newYearDate = new Date(`June 26, 2026 17:00:00`);
+    const newYearDate = new Date(`June 26, 2026 00:00:00`);
     const difference = now - newYearDate;
             
     if (difference <= 0) {
