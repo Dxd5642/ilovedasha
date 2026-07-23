@@ -41,7 +41,7 @@ export function updateCountdown() {
 }     
 
 
-export function createHeartsShower(event) {
+export function createHeartsShower(event, icons = ['❤️', '💖', '💕', '✨']) {
     const heartsCount = 6; // Сколько сердечек вылетает за раз
     
     // Получаем координаты тапа (подходит и для touch, и для клика)
@@ -51,7 +51,7 @@ export function createHeartsShower(event) {
     for (let i = 0; i < heartsCount; i++) {
       const heart = document.createElement('div');
       heart.classList.add('floating-heart');
-      heart.innerHTML = ['❤️', '💖', '💕', '✨'][Math.floor(Math.random() * 4)];
+      heart.innerHTML = icons[Math.floor(Math.random() * 4)];
 
       // Задаем случайный разлет влево/вправо и угол поворота через CSS-переменные
       const randomX = (Math.random() - 0.5) * 120; // Разлет от -60px до +60px

@@ -1,3 +1,5 @@
+import * as func from "./timer.js"
+
 export function initMouth1(){
     const videoRings = document.querySelectorAll('.video-ring');
 
@@ -57,7 +59,7 @@ export function initMouth1(){
             animated = true;
             statValues.forEach(counter => {
             const target = +counter.getAttribute('data-target');
-            const duration = 1500; // 1.5 секунды длится анимация
+            const duration = 3000; // 1.5 секунды длится анимация
             const stepTime = 20;
             const steps = duration / stepTime;
             const increment = target / steps;
@@ -78,4 +80,9 @@ export function initMouth1(){
 
         observer.observe(statsSection);
     }
+
+    const stats = document.querySelectorAll(".stat-card")
+    stats.forEach(card => {
+        card.addEventListener('click', (e) => {func.createHeartsShower(e)})
+    })
 }

@@ -283,7 +283,9 @@
 .video-ring,
 .telegram-video,
 .sound-toggle,
-.play-overlay {
+.play-overlay,
+.stat-value,
+.stat-label {
   -webkit-tap-highlight-color: transparent !important;
   -webkit-touch-callout: none; 
   user-select: none;

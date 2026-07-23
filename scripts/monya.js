@@ -1,6 +1,5 @@
 import * as main from "./timer.js"
 
-
 export function initMonya(){
 const loadMoreBtn = document.getElementById('load-more-btn');
 
