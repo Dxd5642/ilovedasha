@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Я люблю дашу 💖</title>
+    <style>
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fffafb;
+      z-index: 99999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    #preloader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .heart-loader {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      background-color: #ff9a9e;
+      transform: rotate(45deg);
+      animation: heartbeat 1.2s infinite;
+    }
+
+    .heart-loader::before,
+    .heart-loader::after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: #ff9a9e;
+      border-radius: 50%;
+    }
+
+    .heart-loader::before {
+      top: -20px;
+      left: 0;
+    }
+
+    .heart-loader::after {
+      top: 0;
+      left: -20px;
+    }
+
+    @keyframes heartbeat {
+      0% { transform: rotate(45deg) scale(0.8); }
+      5% { transform: rotate(45deg) scale(0.9); }
+      10% { transform: rotate(45deg) scale(0.8); }
+      15% { transform: rotate(45deg) scale(1); }
+      50% { transform: rotate(45deg) scale(0.8); }
+      100% { transform: rotate(45deg) scale(0.8); }
+    }
+    
+    body.loading {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="loading">
+
+    <div id="preloader">
+        <div class="heart-loader"></div>
+    </div>
+
+    <div class="hero_block block">
+        <div class="container">
+            <header class="hero" id="hero">
+                <div class="hero-overlay"></div>
+
+                <img src="./src/images/hero/cat.gif" class="hero_cat">
+                <img src="./src/images/hero/minions-minion.gif" class="hero_minion">
+                <img src="./src/images/hero/minion2.gif" class="hero_minion2">
+
+                СДЕЛАТЬ НАДО заполнить первый месяц, и еще интерактивчика добавить куда нибудь
+
+                <div class="hero-content">
+
+
+                    <p class="hero-subtitle">С того самого дня "26.06.26"</p>
+    
+                    <!-- ИНТЕРАКТИВНАЯ АВАТАРКА -->
+                    <div class="hero-avatar-wrapper" id="avatar-trigger">
+                        <div class="avatar-ring"></div>
+                        <img src="./src/images/hero/hero_img.jpg" alt="Мы" class="hero-avatar" id="hero-avatar-img">
+                        <!-- Микро-подпись, меняющаяся при клике -->
+                        <span class="avatar-tag" id="avatar-tag">Тапни на нас ✨</span>
+                    </div>
+
+                    <p class="hero-subtitle"><strong>Даша и Илья</strong></p>
+                    <h1 class="hero-title">Наша история</h1> 
+
+                    <div class="timer-glass-card">
+                        <div class="time-block">
+                            <span class="time-value" id="days">31</span>
+                            <span class="time-label" id="days_label">дней</span>
+                        </div>
+                        <div class="time-divider">:</div>
+                        <div class="time-block">
+                            <span class="time-value" id="hours">14</span>
+                            <span class="time-label" id="hours_label">часов</span>
+                        </div>
+                        <div class="time-divider">:</div>
+                        <div class="time-block">
+                            <span class="time-value" id="minutes">42</span>
+                            <span class="time-label" id="minutes_label">минут</span>
+                        </div>
+                        <div class="time-divider">:</div>
+                        <div class="time-block">
+                            <span class="time-value" id="seconds">15</span>
+                            <span class="time-label" id="seconds_label">секунд</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-indicator">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </header>
+        </div>
+    </div>
+
+    <div class="menu_block block">
+        <section id="menu" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Наши главы</h2>
+            <p class="month-text">*Выбери для перехода*</p>
+    
+            <div class="months-scroll-wrapper">
+                <div class="months-scroll-inner">
+                    
+                    <a href="#month1" class="month-card active-month">
+                    <span class="month-number">01</span>
+                    <span class="month-text">Первый месяц</span>
+                    <div class="month-status">❤️ Завершен</div> 
+                    </a>
+
+                    <div class="month-card locked">
+                    <span class="month-number">02</span>
+                    <span class="month-text">Второй <br>месяц</span>
+                    <div class="month-status">⏳ Начался...</div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <a href="#monya" class="special-card monya-card">
+                <div class="special-info">
+                    <h3 class="special-title">Моня 🐾</h3>
+                    <p class="special-subtitle">Любимая булочка</p>
+                </div>
+                <div class="special-image-placeholder"></div>
+            </a>
+        </section>
+    </div>
+
+    <nav class="floating-nav">
+    <ul class="floating-nav-list">
+        <li>
+        <a href="#menu" class="nav-item active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+        </a>
+        </li>
+        <li>
+        <a href="#hero" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+        </a>
+        </li>
+        <li>
+        <a href="#monya" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5c.67 0 1.5-.33 1.5-1.5S12.67 2 12 2s-1.5.33-1.5 1.5S11.33 5 12 5z"></path>
+            <path d="M17.5 8c.83 0 1.5-.67 1.5-1.5S18.33 5 17.5 5s-1.5.67-1.5 1.5S16.67 8 17.5 8z"></path>
+            <path d="M6.5 8c.83 0 1.5-.67 1.5-1.5S7.33 5 6.5 5s-1.5.67-1.5 1.5S5.67 8 6.5 8z"></path>
+            <path d="M12 22c4.2 0 7-3.8 7-8 0-3-2-5-7-5s-7 2-7 5c0 4.2 2.8 8 7 8z"></path>
+            </svg>
+        </a>
+        </li>
+    </ul>
+    </nav>
+
+    <div class="mouth1_block block">
+        <div class="container">
+            <section id="month1" class="content-section">                
+                <!-- Заголовок и вводный текст -->
+                <div class="month-intro-card">
+                    <span class="month-badge">Месяц #1</span>
+                    <h2 class="section-title">Начало долгой истории</h2>
+                    <p class="month-text">
+                        Наш первый месяц прошёл на расстоянии, но эти километры только доказали, насколько мы близко. Спасибо за каждое твое сообщение, видеокружки и голосовые, они все заставляют меня улыбаться<br>Люблю тебя ❤️
+                    </p>
+                </div>
+
+                <!-- Блок цитат -->
+                <div class="quotes-wrapper">
+                    <div class="quote-card">
+                        <span class="quote-icon">💬</span>
+                        <p class="quote-text">«Расстояние значит так мало, когда кто-то значит так много»</p>
+                    </div>
+                    <div class="quote-card accent">
+                        <span class="quote-icon">✨</span>
+                        <p class="quote-text">«Жду не дождусь, когда обниму тебя лично»</p>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+  
+                <!-- Статистика -->
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">💬</div>
+                    <div class="stat-info">
+                    <span class="stat-value" data-target="14820">0</span>
+                    <span class="stat-label">сообщений</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">🎙️</div>
+                    <div class="stat-info">
+                    <span class="stat-value" data-target="342">0</span>
+                    <span class="stat-label">голосовых</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">📞</div>
+                    <div class="stat-info">
+                    <span class="stat-value" data-target="342">0</span>
+                    <span class="stat-label">Минут говорили по телефону</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">🌇</div>
+                    <div class="stat-info">
+                    <span class="stat-value" data-target="342">0</span>
+                    <span class="stat-label">Фотографий</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">🥰</div>
+                    <div class="stat-info">
+                    <span class="stat-value">532</span>
+                    <span class="stat-label">Количество слов "Люблю" в диалогах</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">❤️</div>
+                    <div class="stat-info">
+                    <span class="stat-value stat-value-love">∞</span>
+                    <span class="stat-label">Любви между нами</span>
+                    </div>
+                </div>
+
+                </div>
+
+                <!-- Видеокружочки (как в Telegram) -->
+                <div class="video-circles-section">
+                    <h3 class="subsection-title">Видео-кружочки 🎥</h3>
+                    <div class="video-circles-wrapper">
+                        
+                        <div class="video-circle-item">
+                        <div class="video-ring">
+                            <!-- muted playsinline обязательны для работы на iOS/Android -->
+                            <video src="./src/videos/mouth1/videoFirstVideo.mp4" playsinline muted class="telegram-video"></video>
+                            <div class="play-overlay">▶</div>
+                            <div class="sound-toggle">🔇</div>
+                        </div>
+                        <span class="video-caption">Первый кружочек 🤫</span>
+                        </div>
+
+                        <div class="video-circle-item">
+                        <div class="video-ring">
+                            <video src="video2.mp4" playsinline muted class="telegram-video"></video>
+                            <div class="play-overlay">▶</div>
+                            <div class="sound-toggle">🔇</div>
+                        </div>
+                        <span class="video-caption">Последний кружочек 😌</span>
+                        </div>
+
+                    </div>
+
+                    <div class="video-circles-wrapper video-circles-wrapper-too">
+                        
+                        <div class="video-circle-item">
+                        <div class="video-ring">
+                            <video src="./src/videos/mouth1/videoMonya.mp4" muted playsinline class="telegram-video"></video>
+                            <div class="play-overlay">▶</div>
+                            <div class="sound-toggle">🔇</div>
+                        </div>
+                        <span class="video-caption">Без Мони никак 🐾</span>
+                        </div>
+
+                        <div class="video-circle-item">
+                        <div class="video-ring">
+                            <video src="./src/videos/mouth1/videoMostLove.mp4" playsinline muted class="telegram-video"></video>
+                            <div class="play-overlay">▶</div>
+                            <div class="sound-toggle">🔇</div>
+                        </div>
+                        <span class="video-caption">Самая милая ❤️</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Мини-галерея фото (Полароид-стиль в горизонтальном скролле) -->
+                <div class="month-gallery-section">
+                    <h3 class="subsection-title">Моменты месяца 📸</h3>
+                    <div class="polaroid-scroll">
+                        
+                        <div class="polaroid-card">
+                        <img src="https://placehold.co/300x300/ffb6b9/white?text=Photo+1" alt="Фото 1">
+                        <span class="polaroid-caption">Наш созвон</span>
+                        </div>
+
+                        <div class="polaroid-card">
+                        <img src="https://placehold.co/300x300/ffc1c1/white?text=Photo+2" alt="Фото 2">
+                        <span class="polaroid-caption">Параллельный кофе</span>
+                        </div>
+
+                        <div class="polaroid-card">
+                        <img src="https://placehold.co/300x300/fadcd9/white?text=Photo+3" alt="Фото 3">
+                        <span class="polaroid-caption">Скриншот улыбки</span>
+                        </div>
+
+                        <div class="polaroid-card">
+                        <img src="https://placehold.co/300x300/f8e1e1/white?text=Photo+4" alt="Фото 4">
+                        <span class="polaroid-caption">Закат для тебя</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="month-gallery-section">
+                    <div class="polaroid-scroll">
+                        
+                        <div class="polaroid-card">
+                        <img src="https://placehold.co/300x300/ffb6b9/white?text=Photo+1" alt="Фото 1">
+                        <span class="polaroid-caption">Наш созвон</span>
+                        </div>
+
+                        <div class="polaroid-card">
+                        <img src="https://placehold.co/300x300/ffc1c1/white?text=Photo+2" alt="Фото 2">
+                        <span class="polaroid-caption">Параллельный кофе</span>
+                        </div>
+
+                        <div class="polaroid-card">
+                        <img src="https://placehold.co/300x300/fadcd9/white?text=Photo+3" alt="Фото 3">
+                        <span class="polaroid-caption">Скриншот улыбки</span>
+                        </div>
+
+                        <div class="polaroid-card">
+                        <img src="https://placehold.co/300x300/f8e1e1/white?text=Photo+4" alt="Фото 4">
+                        <span class="polaroid-caption">Закат для тебя</span>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="monya_block block">
+        <div class="container">
+            <section id="monya" class="content-section">                
+                <div class="monya-header">
+                <h2 class="section-title">Наша Моня 🐾</h2>
+                <p class="monya-desc">
+                    Главный спонсор уютных вечеров и внезапных тыгыдыков. Без ее пушистого контроля этот месяц был бы совсем другим.
+                </p>
+                </div>
+
+                <div class="monya-gallery">
+                
+                <div class="photo-group">
+                    <img src="./src/images/monya/6.png" alt="Моня" class="gallery-img img-large">
+                    <img src="./src/images/monya/2.png" alt="Моня" class="gallery-img img-small">
+                    <img src="./src/images/monya/3.png" alt="Моня" class="gallery-img img-small">
+                    <img src="./src/images/monya/4.png" alt="Моня" class="gallery-img img-small">
+                    <img src="./src/images/monya/5.png" alt="Моня" class="gallery-img img-small">
+                </div>
+
+                <div class="photo-group hidden-group">
+                    <img src="./src/images/monya/1.png" alt="Моня" class="gallery-img img-large">
+                    <img src="./src/images/monya/7.png" alt="Моня" class="gallery-img img-small">
+                    <img src="./src/images/monya/8.png" alt="Моня" class="gallery-img img-small">
+                    <img src="./src/images/monya/9.png" alt="Моня" class="gallery-img img-small">
+                    <img src="./src/images/monya/10.png" alt="Моня" class="gallery-img img-small">
+                </div>
+
+                <!-- Тут добавлять можно моню -->
+
+                </div>
+
+                <button id="load-more-btn" class="load-more-btn">Показать еще фоточки 📸</button>
+
+            </section>
+        </div>
+    </div>
+
+</body>
+
+<script type="module" src="scripts/main.js"></script>
+</html>
