@@ -241,3 +241,14 @@
   top: 26px;
   width: 190px;
 }
+@media (max-height: 780px){
+  .hero_minion,
+  .hero_minion2 {
+    top: 0px;
+    width: 100px;
+  }
+
+  .hero_cat {
+    display: none;
+  }
+}
