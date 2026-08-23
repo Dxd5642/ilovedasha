@@ -49,7 +49,7 @@ export function initMouth1(){
     });
 
 
-    const statsSection = document.querySelector('.stats-grid');
+    const statsSection = document.querySelectorAll('.stats-grid');
     const statValues = document.querySelectorAll('.stat-value[data-target]');
     let animated = false;
 
@@ -78,7 +78,7 @@ export function initMouth1(){
         }
         }, { threshold: 0.5 });
 
-        observer.observe(statsSection);
+        statsSection.forEach(statSec => {observer.observe(statSec);})
     }
 
     const stats = document.querySelectorAll(".stat-card")

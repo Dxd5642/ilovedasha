@@ -18,6 +18,8 @@ setInterval(timer.updateCountdown, 1000)
 import * as menu from "./menu.js"
 import * as monya from "./monya.js"
 import * as mouth1 from "./mouth1.js"
+import * as month2 from "./month2.js"
+
 
 
 
@@ -25,5 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     timer.initMainBlock()
     menu.initMenu()
     mouth1.initMouth1()
+    month2.initMouth2()
     monya.initMonya()
 });

@@ -89,7 +89,7 @@
                     <!-- ИНТЕРАКТИВНАЯ АВАТАРКА -->
                     <div class="hero-avatar-wrapper" id="avatar-trigger">
                         <div class="avatar-ring"></div>
-                        <img src="./src/images/hero/hero_img.jpg" alt="Мы" class="hero-avatar" id="hero-avatar-img">
+                        <img src="./src/images/hero/we.jpg" alt="Мы" class="hero-avatar" id="hero-avatar-img">
                         <!-- Микро-подпись, меняющаяся при клике -->
                         <span class="avatar-tag" id="avatar-tag">Тапни на нас ✨</span>
                     </div>
@@ -146,12 +146,17 @@
                     <div class="month-status">❤️ Завершен</div> 
                     </a>
 
-                    <div class="month-card locked">
+                    <a href="#month2" class="month-card active-month">
                     <span class="month-number">02</span>
                     <span class="month-text">Второй <br>месяц</span>
+                    <div class="month-status">💖 Завершен</div>
+                    </a>
+
+                    <div class="month-card locked">
+                    <span class="month-number">03</span>
+                    <span class="month-text">Третий <br>месяц</span>
                     <div class="month-status">⏳ Начался...</div>
                     </div>
-
 
                 </div>
             </div>
@@ -426,6 +431,235 @@
         </div>
     </div>
 
+
+    <div class="mouth2_block block">
+        <div class="container">
+                        <!-- Секция Второго Месяца -->
+            <section id="month2" class="content-section">
+            <div class="container">
+                
+                <!-- Шапка месяца -->
+                <div class="month-intro-card month2-card">
+                <span class="month-badge accent-badge">Месяц #2</span>
+                <h2 class="section-title">Последний месяц разлуки 🎉</h2>
+                <p class="month-text">
+                    Второй месяц стал особенным: мы встретили твой день рождения! А еще это послений месяц нашей разлуки, в любом случае, какие бы не были между нами километры, наша любовь все равно сильнее любого расстояния.
+                </p>
+                </div>
+
+                <!-- Особая карточка Дня Рождения -->
+                <div class="birthday-banner">
+                <div class="bday-decor">🎂✨</div>
+                <div class="bday-content">
+                    <h3>Happy Birthday, my love!</h3>
+                    <p>Главное событие этого месяца - ты родилась! Спасибо за твою улыбку, которая освещает любые расстояния.</p>
+                </div>
+                
+                <!-- Интерактивная кнопка-подарок -->
+                <button class="gift-btn" id="giftBtn">
+                    <span class="gift-icon">🎁</span>
+                    <span>Открыть открытку</span>
+                </button>
+
+                <!-- Всплывающее секретное пожелание -->
+                <div class="gift-message hidden" id="giftMessage">
+                    <p>💖 Желаю нам бесконечности счастливых моментов вместе, исполнения всех твоих мечт и скорейшей встречи!</p>
+                </div>
+                </div>
+
+                <div class="interactive-memories">
+                <h3 class="subsection-title">Записки месяца (нажми, чтобы прочесть) ✉️</h3>
+                
+                <div class="memories-list">
+                    
+                    <!-- Записка 1 -->
+                    <div class="memory-envelope" onclick="this.classList.toggle('open')">
+                    <div class="envelope-badge">Записка #1</div>
+                    <div class="envelope-header">
+                        <span class="env-emoji">🎁</span>
+                        <span class="env-title">Операция «Подарки»</span>
+                        <span class="env-arrow">▼</span>
+                    </div>
+                    <div class="envelope-content">
+                        <p>Выбирать тебе подарки на день рождения, нетерпеливо ждать пока ты их откроешь, и увидеть твою реакцию на них - это было лучшее событие лета!</p>
+                    </div>
+                    </div>
+
+                    <!-- Записка 2 -->
+                    <div class="memory-envelope" onclick="this.classList.toggle('open')">
+                    <div class="envelope-badge">Записка #2</div>
+                    <div class="envelope-header">
+                        <span class="env-emoji">👫</span>
+                        <span class="env-title">Одни эмоции на двоих</span>
+                        <span class="env-arrow">▼</span>
+                    </div>
+                    <div class="envelope-content">
+                        <p>Знаешь, где бы я ни был, твои эмоции всегда ощущались как мои собственные. Если тебе грустно - я переживаю вместе с тобой, если ты счастлива - мой мир тоже становится светлее.</p>
+                    </div>
+                    </div>
+
+                    <!-- Записка 3 (Добавим третью для ровности) -->
+                    <div class="memory-envelope" onclick="this.classList.toggle('open')">
+                    <div class="envelope-badge">Записка #3</div>
+                    <div class="envelope-header">
+                        <span class="env-emoji">✨</span>
+                        <span class="env-title">Главное осознание месяца</span>
+                        <span class="env-arrow">▼</span>
+                    </div>
+                    <div class="envelope-content">
+                        <p>Расстояние - это временная штука, а эмоции и то, как мы поддерживаем друг друга каждый день - навсегда.</p>
+                    </div>
+                    </div>
+
+                </div>
+                </div>
+
+                <h3 class="subsection-title">Статистика за месяц 🗒️</h3>
+                <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">💬</div>
+                    <div class="stat-info">
+                    <span class="stat-value" data-target="19952">0</span>
+                    <span class="stat-label">сообщений</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">🎙️</div>
+                    <div class="stat-info">
+                    <span class="stat-value" data-target="840">0</span>
+                    <span class="stat-label">голосовых</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">🌇</div>
+                    <div class="stat-info">
+                    <span class="stat-value" data-target="458">0</span>
+                    <span class="stat-label">Фотографий</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">🥰</div>
+                    <div class="stat-info">
+                    <span class="stat-value" data-target="331">0</span>
+                    <span class="stat-label">Количество слов "Люблю" в диалогах</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">❤️</div>
+                    <div class="stat-info">
+                    <span class="stat-value stat-value-love">∞∞</span>
+                    <span class="stat-label">Любви между нами</span>
+                    </div>
+                </div>
+
+                </div>
+
+                <!-- Мозаичная галерея фото (Grid вместо скролла) -->
+                <div class="month2-gallery-section">
+                <h3 class="subsection-title">Моменты месяца 📸</h3>
+                <div class="bday-grid">
+                    <div class="grid-item item-large">
+                    <img src="src/images/month2/1.png" alt="Главное фото месяца">
+                    <div class="grid-caption">Мы так хорошо смотримся ✨</div>
+                    </div>
+                    <div class="grid-item">
+                    <img src="src/images/month2/2.png" alt="Подарок">
+                    </div>
+                    <div class="grid-item">
+                    <img src="src/images/month2/4.png" alt="Улыбка">
+                    </div>
+                    <div class="grid-item item-wide">
+                    <img src="src/images/month2/3.png" alt="Торт">
+                    <div class="grid-caption">Самые любимые 😍</div>
+                    </div>
+                </div>
+                </div>
+
+                <br>
+
+                <div class="video-circles-section">
+                    <h3 class="subsection-title">Видео-кружочки 🎥</h3>
+                    <div class="video-circles-wrapper">
+                        
+                        <div class="video-circle-item">
+                        <div class="video-ring">
+                            <!-- muted playsinline обязательны для работы на iOS/Android -->
+                            <video src="./src/videos/month2/minionsVideo.mp4" playsinline muted class="telegram-video"></video>
+                            <div class="play-overlay">▶</div>
+                            <div class="sound-toggle">🔇</div>
+                        </div>
+                        <span class="video-caption">Миньоны в кино 😇</span>
+                        </div>
+
+                        <div class="video-circle-item">
+                        <div class="video-ring">
+                            <video src="./src/videos/month2/ParkVideo.mp4" playsinline muted class="telegram-video"></video>
+                            <div class="play-overlay">▶</div>
+                            <div class="sound-toggle">🔇</div>
+                        </div>
+                        <span class="video-caption">Были в зоопарке 🦩</span>
+                        </div>
+
+                    </div>
+
+                    <div class="video-circles-wrapper video-circles-wrapper-too">
+
+                        <div class="video-circle-item">
+                        <div class="video-ring">
+                            <video src="./src/videos/month2/CityMollVideo.mp4" muted playsinline class="telegram-video"></video>
+                            <div class="play-overlay">▶</div>
+                            <div class="sound-toggle">🔇</div>
+                        </div>
+                        <span class="video-caption">Гуляли по Сити Молу 🏪</span>
+                        </div>
+                        
+
+                         <div class="video-circle-item">
+                        <div class="video-ring">
+                            <video src="./src/videos/month2/OzonVideo.mp4" playsinline muted class="telegram-video"></video>
+                            <div class="play-overlay">▶</div>
+                            <div class="sound-toggle">🔇</div>
+                        </div>
+                        <span class="video-caption">Снова работали на Озон 👩‍💼</span>
+                        </div>
+
+
+                    </div>
+
+                    <div class="video-circles-wrapper video-circles-wrapper-too">
+                        
+                        <div class="video-circle-item">
+                        <div class="video-ring">
+                            <video src="./src/videos/month2/NewPodVideo.mp4" muted playsinline class="telegram-video"></video>
+                            <div class="play-overlay">▶</div>
+                            <div class="sound-toggle">🔇</div>
+                        </div>
+                        <span class="video-caption">Купили новый подик 💨</span>
+                        </div>
+
+                        <div class="video-circle-item">
+                        <div class="video-ring">
+                            <video src="./src/videos/month2/FlowersVideo.mp4" playsinline muted class="telegram-video"></video>
+                            <div class="play-overlay">▶</div>
+                            <div class="sound-toggle">🔇</div>
+                        </div>
+                        <span class="video-caption">Красивый букетик 💐</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            </section>
+        </div>
+    </div>
+
+
     <div class="monya_block block">
         <div class="container">
             <section id="monya" class="content-section">                
@@ -437,8 +671,16 @@
                 </div>
 
                 <div class="monya-gallery">
+
+                <div class="photo-group ">
+                    <img src="./src/images/monya/11.png" alt="Моня" class="gallery-img img-large">
+                    <img src="./src/images/monya/12.png" alt="Моня" class="gallery-img img-small">
+                    <img src="./src/images/monya/13.png" alt="Моня" class="gallery-img img-small">
+                    <img src="./src/images/monya/14.png" alt="Моня" class="gallery-img img-small">
+                    <img src="./src/images/monya/15.png" alt="Моня" class="gallery-img img-small">
+                </div>
                 
-                <div class="photo-group">
+                <div class="photo-group hidden-group">
                     <img src="./src/images/monya/6.png" alt="Моня" class="gallery-img img-large">
                     <img src="./src/images/monya/2.png" alt="Моня" class="gallery-img img-small">
                     <img src="./src/images/monya/3.png" alt="Моня" class="gallery-img img-small">
@@ -453,8 +695,6 @@
                     <img src="./src/images/monya/9.png" alt="Моня" class="gallery-img img-small">
                     <img src="./src/images/monya/10.png" alt="Моня" class="gallery-img img-small">
                 </div>
-
-                <!-- Тут добавлять можно моню -->
 
                 </div>
 

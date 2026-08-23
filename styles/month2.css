@@ -1,0 +1,254 @@
+/* --- Стили 2-го месяца --- */
+.month2-card {
+  border-left: 4px solid #ff4757;
+}
+
+.accent-badge {
+  background: #ffeaa7;
+  color: #d63031;
+}
+
+/* Баннер Дня Рождения */
+.birthday-banner {
+  background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+  border-radius: 24px;
+  padding: 24px 20px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(255, 117, 140, 0.3);
+  margin-bottom: 25px;
+}
+
+.bday-decor {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.bday-content h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.bday-content p {
+  font-size: 0.9rem;
+  opacity: 0.95;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+/* Кнопка Подарка */
+.gift-btn {
+  background: #ffffff;
+  color: #ff4757;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.gift-btn:active {
+  transform: scale(0.95);
+}
+
+.gift-message {
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 12px 15px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  animation: fadeIn 0.4s ease;
+}
+
+.gift-message.hidden {
+  display: none;
+}
+
+/* Сетка воспоминаний */
+.memories-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.memory-card {
+  background: #fff;
+  padding: 16px 18px;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border: 1px solid #f0f0f0;
+}
+
+.memory-emoji {
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.memory-card h4 {
+  font-size: 0.95rem;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.memory-card p {
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Фото-сетка (Grid) */
+.bday-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.grid-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 130px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-item.item-large {
+  grid-column: span 2;
+  height: 200px;
+}
+
+.grid-item.item-wide {
+  grid-column: span 2;
+  height: 270px;
+}
+
+.grid-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 12px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.6));
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Блок интерактивных записок */
+.interactive-memories {
+  margin-bottom: 30px;
+}
+
+.memories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.memory-envelope {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 16px;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.memory-envelope:active {
+  transform: scale(0.98);
+}
+
+.envelope-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ff758c;
+  background: #fff0f2;
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.envelope-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.env-emoji {
+  font-size: 1.3rem;
+}
+
+.env-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #222;
+  flex: 1;
+}
+
+.env-arrow {
+  font-size: 0.75rem;
+  color: #aaa;
+  transition: transform 0.3s ease;
+}
+
+/* Скрытый контент внутри конверта */
+.envelope-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+  border-top: 1px dashed transparent;
+}
+
+/* Состояние OPEN (Раскрыто при клике) */
+.memory-envelope.open {
+  border-color: #ff758c;
+  background: linear-gradient(to bottom, #ffffff, #fffdfd);
+  box-shadow: 0 8px 20px rgba(255, 117, 140, 0.12);
+}
+
+.memory-envelope.open .env-arrow {
+  transform: rotate(180deg);
+  color: #ff758c;
+}
+
+.memory-envelope.open .envelope-content {
+  max-height: 200px; /* Достаточно места для текста */
+  opacity: 1;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top-color: #ffe0e3;
+}
